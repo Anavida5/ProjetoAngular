@@ -24,4 +24,19 @@
     <input type="number" class="form-control" disabled placeholder="{{resultado}}">
           
 </div>
+<div class="input-group">
+    <button type="submit" class="btn btn-danger btn-sm" (click)="limparValores()">Limpar Valores</button>
+</div>
+
+
+<hr>
+<p *ngIf="n1 || operador || n2"> {{ n1 }} {{operador}} {{ n2 }} = {{ resultado }}</p>
+<hr>
+
+<div class="col margin" *ngIf="contas.length">
+    <p> Histórico de Contas </p>
+      <ol class="list-group">
+        <li class="list-group-item" *ngFor="let conta of contas">{{ conta }}</li>
+      </ol>
+  </div>
 
